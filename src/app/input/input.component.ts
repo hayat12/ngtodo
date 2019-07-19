@@ -36,7 +36,7 @@ export class InputComponent implements OnInit {
   }
 
   addTask(data) {
-    this.isSpin = true;
+    // this.isSpin = true;
     // this.db.collection('todo').add(data).then((res) => {
     //   
     //   this.isSpin = false;
