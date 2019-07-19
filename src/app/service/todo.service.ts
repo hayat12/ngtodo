@@ -5,21 +5,20 @@ import { AngularFirestore } from '@angular/fire/firestore';
   providedIn: 'root'
 })
 export class TodoService {
-  constructor(private afSore: AngularFirestore ) {}
+  constructor(private afSore: AngularFirestore) { }
 
-getTask() {
-  return new Promise<any>((resolve, reject) => {
-    this.afSore.collection('/todo').snapshotChanges()
-    .subscribe(snapshots => {
-      resolve(snapshots);
+  getTask() {
+    return new Promise<any>((resolve, reject) => {
+      this.afSore.collection('/todo').snapshotChanges()
+        .subscribe(snapshots => {
+          resolve(snapshots);
+        });
     });
-  });
-}
+  }
 
-deleteTask(id){
-  return this.afSore.collection('todo').doc(id).delete();
-}
-
+  deleteTask(id) {
+    return this.afSore.collection('todo').doc(id).delete();
+  }
 }
 
 export interface Item {
