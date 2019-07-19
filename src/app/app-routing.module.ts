@@ -5,7 +5,7 @@ import { InputComponent } from './input/input.component';
 
 const routes: Routes = [
   {
-    path: './',
+    path: '',
     component: InputComponent
   },
   {
