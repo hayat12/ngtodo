@@ -24,7 +24,7 @@ import { TodoService } from './service/todo.service';
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    // AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [
     AngularFirestore,

@@ -17,13 +17,15 @@ export class ListComponent implements OnInit {
 
   deleteTask(id) {
     this.isSpin = true;
-    this.todoService.deleteTask(id)
-    .then((res) => {
-      this.isSpin = false;
-      this.countChanged.emit(11);
-      },
-      err => {
-        console.log(err);
-      });
+    // this.todoService.deleteTask(id)
+    // .then((res) => {
+    //   this.isSpin = false;
+    //   },
+    //   err => {
+      //     console.log(err);
+      //   });
+    this.todoService.deleteTasks(id);
+    this.countChanged.emit(11);
+    this.isSpin = false;
   }
 }
