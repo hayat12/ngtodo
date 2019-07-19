@@ -7,10 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private router: Router){}
+  constructor() {}
   title = 'TooDo';
 
-  addNewTask() {
-    this.router.navigate(['./input']);
-  }
+  addNewTask() {}
 }
